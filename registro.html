@@ -1,0 +1,42 @@
+<html>
+	<head>
+		<script>
+			function vervalores(){
+			 var sAux="";
+			 var frm = document.getElementById("registro");
+			 for (i=1;i<frm.elements.length;i++)
+			 {
+			 sAux += "NOMBRE: " + frm.elements[i].name + " ";
+			 sAux += "VALOR: " + frm.elements[i].value + "\n" ;
+			 }
+			 alert(sAux);
+			}
+		</script> 
+	</head>
+	<body>
+	 
+	<h3>Formulario</h3>
+	 
+	<form id='registro' name='registro' onSubmit='vervalores()'> 
+		<p>Nombre y apellidos(*):</p>
+		<input type="text" name="nombre" value=""/>
+		<p>Direccion de correo(*):</p>
+		<input type="text" name="correo" value=""/>
+		<p>Password(*):</p>
+		<input type="password" name="contraseña" value=""/>
+		<p>Numero de telefono(*):</p>
+		<input type="text" name="telefono" value=""/>
+		<p>Especialidad(*):</p>
+		<input type="radio" name="especialidad" value="IS">Ingenieria de Software </input>
+		</br>
+		<input type="radio" name="especialidad" value="IC">Ingenieria de Computadores </input>
+		</br>
+		<input type="radio" name="especialidad" value="C">Computacion </input>
+		<p>Tecnologias y herramientas en las que esta interesado:</p>
+		<textarea name="tecno" form="registro">Enter text here...</textarea>
+		</br></br> 
+	  <input type="submit" value="Enviar" />
+	</form>
+	 
+	</body>
+</html>
